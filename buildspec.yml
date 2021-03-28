@@ -22,8 +22,9 @@ phases:
     #   - command
   post_build:
     commands:
-      - echo 'This phease is post_build'
-    #   - command
+      - echo This phease is post_build at `date`
+      - echo exec DB migration
+      - npm run db:migrate
     # finally:
     #   - command
     #   - command
