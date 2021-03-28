@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  app:
+    image: node:14-alpine
+    volumes:
+      - .:/src
+    environment:
+      DATABASE_URL: postgres://postgres:Passw0rd@db:5432/postgres
+    depends_on:
+      - db
+    tty: true
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: Passw0rd
+    ports:
+    - 5432:5432
