@@ -2,14 +2,11 @@ version: 0.2
 
 phases:
   install:
-    on-failure: ABORT | CONTINUE
     runtime-versions:
-      runtime: 
-        nodejs: 12
+      nodejs: 12
     commands:
       - npm ci
   pre_build:
-    # on-failure: ABORT | CONTINUE
     commands:
       - echo 'This phease is pre_build'
     #   - command
@@ -17,7 +14,6 @@ phases:
     #   - command
     #   - command
   build:
-    # on-failure: ABORT | CONTINUE
     commands:
       - echo 'This phease is build'
     #   - command
@@ -25,7 +21,6 @@ phases:
     #   - command
     #   - command
   post_build:
-    # on-failure: ABORT | CONTINUE
     commands:
       - echo 'This phease is post_build'
     #   - command
