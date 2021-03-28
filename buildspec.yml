@@ -10,24 +10,24 @@ phases:
       - npm ci
   pre_build:
     # on-failure: ABORT | CONTINUE
-    # commands:
-    #   - command
+    commands:
+      - echo 'This phease is pre_build'
     #   - command
     # finally:
     #   - command
     #   - command
   build:
     # on-failure: ABORT | CONTINUE
-    # commands:
-    #   - command
+    commands:
+      - echo 'This phease is build'
     #   - command
     # finally:
     #   - command
     #   - command
   post_build:
     # on-failure: ABORT | CONTINUE
-    # commands:
-    #   - command
+    commands:
+      - echo 'This phease is post_build'
     #   - command
     # finally:
     #   - command
